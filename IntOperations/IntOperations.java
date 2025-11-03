@@ -1,3 +1,4 @@
+package IntOperations;
 public class IntOperations {
     public static int addTwoIntegers(int a, int b) {
         return a + b;
