@@ -16,7 +16,7 @@ public class Capitalize {
             for (int i = 0; i < input.length(); i++) {
                 char c = input.charAt(i);
 
-                if (i == 0 || input.charAt(i - 1) == ' ') {
+                if (i == 0 || input.charAt(i - 1) == ' ' && Character.isLetter(c) ) {
                     if (c >= 'a' && c <= 'z') {
                         sb.append(Character.toUpperCase(c));
                     }
