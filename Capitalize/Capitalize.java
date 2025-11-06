@@ -16,15 +16,13 @@ public class Capitalize {
             for (int i = 0; i < input.length(); i++) {
                 char c = input.charAt(i);
 
-                if (i == 0 || input.charAt(i - 1) == ' ' && Character.isLetter(c) ) {
-                    if (c >= 'a' && c <= 'z') {
-                        sb.append(Character.toUpperCase(c));
-                    }
+                if (i == 0 || input.charAt(i - 1) == ' ' && Character.isLetter(c)) {
+                    sb.append(Character.toUpperCase(c));
                 } else {
                     sb.append(c);
                 }
             }
-            fos.write(sb.toString().getBytes());
+            fos.write(sb.toString().replaceAll(" +", " ").getBytes());
         }
     }
 
