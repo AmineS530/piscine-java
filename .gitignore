@@ -1,2 +1,4 @@
-build
+*.*
+!*.java
 ExerciseRunner.java
+build
