@@ -1,4 +1,5 @@
 *.*
 !*.java
 ExerciseRunner.java
+!03_oop/*/ExerciseRunner.java
 build
