@@ -33,7 +33,11 @@ public class Star extends CelestialObject {
         }
 
         Star other = (Star) obj;
-        return Double.compare(magnitude, other.magnitude) == 0;
+        return Double.compare(x, other.x) == 0
+                && Double.compare(y, other.y) == 0
+                && Double.compare(z, other.z) == 0
+                && this.name.equals(other.name)
+                && Double.compare(magnitude, other.magnitude) == 0;
     }
 
     @Override
