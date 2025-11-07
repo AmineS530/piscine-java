@@ -21,6 +21,38 @@ public class CelestialObject {
         name = newname;
     }
 
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public double getZ() {
+        return z;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setX(double newx) {
+        x = newx;
+    }
+
+    public void setY(double newy) {
+        y = newy;
+    }
+
+    public void setZ(double newz) {
+        z = newz;
+    }
+
+    public void setName(String newname) {
+        name = newname;
+    }
+
     public static double getDistanceBetween(CelestialObject co1, CelestialObject co2) {
         double deltaX = co2.x - co1.x;
         double deltaY = co2.y - co1.y;
