@@ -24,11 +24,11 @@ public class Galaxy {
         Map<String, Integer> Masses = new HashMap<>();
         for (CelestialObject obj : celestialObjects) {
             if (obj instanceof Star) {
-                Masses.merge("Star", obj.mass, Integer::sum);
+                Masses.merge("Star", obj.getMass(), Integer::sum);
             } else if (obj instanceof Planet) {
-                Masses.merge("Planet", obj.mass, Integer::sum);
+                Masses.merge("Planet", obj.getMass(), Integer::sum);
             } else {
-                Masses.merge("Other", obj.mass, Integer::sum);
+                Masses.merge("Other", obj.getMass(), Integer::sum);
             }
         }
         return Masses;

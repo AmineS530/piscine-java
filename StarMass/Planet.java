@@ -42,7 +42,7 @@ public class Planet extends CelestialObject {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, mass, x, y, z, centerStar);
+        return Objects.hash(name, x, y, z, centerStar);
     }
 
     @Override
