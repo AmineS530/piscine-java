@@ -6,6 +6,13 @@ public class CelestialObject {
     public double y;
     public String name;
 
+    public CelestialObject() {
+        x = 0;
+        z = 0;
+        y = 0;
+        name = "Soleil";
+    }
+
     public double getX() {
         return x;
     }
