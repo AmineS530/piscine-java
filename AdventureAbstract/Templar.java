@@ -21,7 +21,7 @@ public class Templar extends Character implements Healer, Tank {
             return;
         }
         int newHealth = Math.min(character.getCurrentHealth() + this.healCapacity, character.getMaxHealth());
-        character.setHealth(newHealth);
+        character.setCurrentHealth(newHealth);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class Templar extends Character implements Healer, Tank {
         if (effectiveDamage < 0) {
             effectiveDamage = 0;
         }
-        this.setHealth(Math.max(this.getCurrentHealth() - effectiveDamage, 0));
+        this.setCurrentHealth(Math.max(this.getCurrentHealth() - effectiveDamage, 0));
     }
 
     @Override

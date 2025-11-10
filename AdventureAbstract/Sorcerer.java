@@ -14,7 +14,7 @@ public class Sorcerer extends Character implements Healer {
             return;
         }
         int newHealth = Math.min(character.getCurrentHealth() + this.healCapacity, character.getMaxHealth());
-        character.setHealth(newHealth);
+        character.setCurrentHealth(newHealth);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class Sorcerer extends Character implements Healer {
     @Override
     public void takeDamage(int damage) {
         int effectiveDamage = damage;
-        this.setHealth(Math.max(this.getCurrentHealth() - effectiveDamage, 0));
+        this.setCurrentHealth(Math.max(this.getCurrentHealth() - effectiveDamage, 0));
     }
 
     @Override

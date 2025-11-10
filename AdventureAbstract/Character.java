@@ -34,18 +34,18 @@ public abstract class Character {
 
     public abstract void takeDamage(int damage);
 
-    public void setHealth(int health) {
+    public void setCurrentHealth(int health) {
         currentHealth = health;
     }
 
     public abstract void attack(Character opponent); //{
-        // int damage = 9;
-        // this would be fun
-        // int critChance = 20;
-        // if (Math.random() * 100 < critChance) {
-        //     damage *= 2;
-        // }
-        // opponent.takeDamage(damage);
+    // int damage = 9;
+    // this would be fun
+    // int critChance = 20;
+    // if (Math.random() * 100 < critChance) {
+    //     damage *= 2;
+    // }
+    // opponent.takeDamage(damage);
     // }
 
     public static String printStatus() {

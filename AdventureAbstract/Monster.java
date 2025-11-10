@@ -14,7 +14,7 @@ public class Monster extends Character {
     @Override
     public void takeDamage(int damage) {
         int effectiveDamage = (int) Math.round(damage * 0.8);
-        this.setHealth(Math.max(this.getCurrentHealth() - effectiveDamage, 0));
+        this.setCurrentHealth(Math.max(this.getCurrentHealth() - effectiveDamage, 0));
     }
 
     @Override
