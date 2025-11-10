@@ -36,6 +36,8 @@ public class Monster extends Character {
     public void attack(Character opponent) throws DeadCharacterException {
         if (opponent.getCurrentHealth() == 0) {
             throw new DeadCharacterException(opponent);
+        } else if (this.getCurrentHealth() == 0) {
+            throw new DeadCharacterException(this);
         }
         Weapon currWeapon = this.getWeapon();
         int damage = currWeapon != null ? currWeapon.getDamage() : 10;
