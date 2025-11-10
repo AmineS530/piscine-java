@@ -10,6 +10,12 @@ public class Templar extends Character implements Healer, Tank {
         this.healCapacity = healCapacity;
     }
 
+    public Templar(String name, int maxHealth, int healCapacity, int shield, Weapon weapon) {
+        super(name, maxHealth, weapon);
+        this.shield = shield;
+        this.healCapacity = healCapacity;
+    }
+
     @Override
     public int getHealCapacity() {
         return this.healCapacity;
@@ -47,8 +53,15 @@ public class Templar extends Character implements Healer, Tank {
 
     @Override
     public String toString() {
-        return this.getCurrentHealth() == 0 ? this.getName() + " has been beaten, even with its " + this.getShield() + " shield. So bad, it could heal " + this.healCapacity + " HP."
+        StringBuilder status = new StringBuilder();
+        status.append(this.getCurrentHealth() == 0 ? this.getName() + " has been beaten, even with its " + this.getShield() + " shield. So bad, it could heal " + this.healCapacity + " HP."
                 : this.getName() + " is a strong Templar with " + this.getCurrentHealth() + " HP. It can heal "
-                + this.healCapacity + " HP and has a shield of " + this.shield + ".";
+                + this.healCapacity + " HP and has a shield of " + this.shield + ".");
+        Weapon currWeapon = this.getWeapon();
+        if (currWeapon != null) {
+            status.append(" He has the weapon ").append(currWeapon.getName()).append(" deals ").append(currWeapon.getDamage())
+                    .append(" damages.");
+        }
+        return status.toString();
     }
 }

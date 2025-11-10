@@ -6,12 +6,22 @@ public abstract class Character {
     private final int maxHealth;
     private int currentHealth;
     private final String name;
+    private Weapon weapon;
     private static List<Character> allCharacters = new java.util.ArrayList<>();
 
     public Character(String name, int maxHealth) {
         this.name = name;
         this.maxHealth = maxHealth;
         this.currentHealth = maxHealth;
+        weapon = null;
+        allCharacters.add(this);
+    }
+
+    public Character(String name, int maxHealth, Weapon weapon) {
+        this.name = name;
+        this.maxHealth = maxHealth;
+        this.currentHealth = maxHealth;
+        this.weapon = weapon;
         allCharacters.add(this);
     }
 
@@ -25,6 +35,10 @@ public abstract class Character {
 
     public String getName() {
         return name;
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
     }
 
     @Override
