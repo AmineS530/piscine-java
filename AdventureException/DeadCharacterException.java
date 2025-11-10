@@ -1,5 +1,5 @@
 
-class DeadCharacterException extends Exception {
+public class DeadCharacterException extends Exception {
 
     private final Character character;
 
