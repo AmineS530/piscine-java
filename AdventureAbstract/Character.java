@@ -34,7 +34,7 @@ public abstract class Character {
 
     public abstract void takeDamage(int damage);
 
-    public void setCurrentHealth(int health) {
+    protected void setCurrentHealth(int health) {
         currentHealth = health;
     }
 
