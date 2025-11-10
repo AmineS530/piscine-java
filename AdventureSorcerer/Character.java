@@ -6,7 +6,7 @@ public class Character {
     private final int maxHealth;
     private int currentHealth;
     private final String name;
-    private final static List<Character> allCharacters = new java.util.ArrayList<>();
+    private static List<Character> allCharacters = new java.util.ArrayList<>();
 
     public Character(String name, int maxHealth) {
         this.name = name;
