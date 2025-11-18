@@ -39,7 +39,7 @@ public class ParseDate {
         int hour = Integer.parseInt(numbers[0]);
         int minute = Integer.parseInt(numbers[1]);
         int second = Integer.parseInt(numbers[2]);
-        boolean isMorning = stringDate.contains("morning") ? true : stringDate.contains("evening");
+        boolean isMorning = stringDate.contains("morning");
         if (!isMorning) {
             if (hour != 12) {
                 hour += 12;
