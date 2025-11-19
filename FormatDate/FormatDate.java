@@ -35,7 +35,7 @@ public class FormatDate {
         return String.format("%s %d %d",
                 monthText,
                 date.getDayOfMonth(),
-                date.getYear());
+                date.getYear() % 100);
     }
 
     public static String formatIso(LocalTime time) {
