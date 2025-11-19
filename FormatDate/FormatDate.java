@@ -12,8 +12,7 @@ public class FormatDate {
             return null;
         }
 
-        DateTimeFormatter monthFormatter = DateTimeFormatter.ofPattern("MMMM", Locale.FRENCH);
-        String monthText = monthFormatter.format(dateTime);
+        String monthText = dateTime.getMonth().getDisplayName(java.time.format.TextStyle.SHORT, Locale.FRANCE);
 
         return String.format("Le %d %s de l'an %d à %dh%dm et %ds",
                 dateTime.getDayOfMonth(),
