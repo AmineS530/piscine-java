@@ -42,11 +42,7 @@ public class FormatDate {
         if (time == null) {
             return null;
         }
-        return String.format("%02d:%02d:%02d.%d",
-                time.getHour(),
-                time.getMinute(),
-                time.getSecond(),
-                time.getNano());
+        return time.format(DateTimeFormatter.ISO_LOCAL_TIME);
     }
 
 }
