@@ -2,7 +2,7 @@
 public class Excalibur {
 
     private final String name;
-    private static final Excalibur INSTANCE = new Excalibur("Excalibur");
+    private static final Excalibur INSTANCE = new Excalibur("Sword");
 
     private Excalibur(String name) {
         this.name = name;
