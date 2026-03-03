@@ -38,15 +38,7 @@ public abstract class Character {
         currentHealth = health;
     }
 
-    public abstract void attack(Character opponent); //{
-    // int damage = 9;
-    // this would be fun
-    // int critChance = 20;
-    // if (Math.random() * 100 < critChance) {
-    //     damage *= 2;
-    // }
-    // opponent.takeDamage(damage);
-    // }
+    public abstract void attack(Character opponent);
 
     public static String printStatus() {
         StringBuilder status = new StringBuilder();
