@@ -12,6 +12,6 @@ public class StreamMap {
     }
     
     public static Set<Integer> uniqIntValuesGreaterThan42(Stream<Double> s) {
-        return s.map(Double::intValue).filter(i -> i > 42).collect(Collectors.toSet());
+        return s.map(Double::intValue).filter(i -> i >= 42).collect(Collectors.toSet());
     }
 }
