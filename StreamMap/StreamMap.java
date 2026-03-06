@@ -8,7 +8,7 @@ public class StreamMap {
     }
 
     public static List<String> upperCaseAllString(Stream<String> s) {
-        return s.map(String::toUpperCase).collect(Collectors.toList());
+        return s.map(String::toUpperCase).toList();
     }
     
     public static Set<Integer> uniqIntValuesGreaterThan42(Stream<Double> s) {
