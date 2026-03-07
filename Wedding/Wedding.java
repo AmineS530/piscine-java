@@ -8,7 +8,7 @@ public class Wedding {
         List<String> second = new ArrayList<>(s);
         return IntStream.range(0, Math.min(first.toArray().length, second.toArray().length))
                 .boxed()
-                .collect(Collectors.toMap(first.stream().toList()::get, second.stream().toList()::get));
+                .collect(Collectors.toMap(first::get, second::get));
     }
 
 }
