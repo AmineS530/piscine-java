@@ -21,6 +21,9 @@ public class ParseDate {
     }
 
     public static LocalTime parseTimeFormat(String stringDate) {
+        if (stringDate.isEmpty()) {
+            return null;
+        }
         String[] numbers = stringDate.split("\\D+");
         if (numbers.length != 3) {
             return null;
