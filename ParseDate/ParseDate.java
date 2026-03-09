@@ -5,14 +5,14 @@ import java.time.format.DateTimeFormatterBuilder;
 public class ParseDate {
 
     public static LocalDateTime parseIsoFormat(String stringDate) {
-        if (stringDate.isEmpty()) {
+        if (stringDate == null) {
             return null;
         }
         return LocalDateTime.parse(stringDate);
     }
 
     public static LocalDate parseFullTextFormat(String stringDate) {
-        if (stringDate.isEmpty()) {
+        if (stringDate == null) {
             return null;
         }
         DateTimeFormatter formatter = new DateTimeFormatterBuilder().parseCaseInsensitive()
@@ -21,7 +21,7 @@ public class ParseDate {
     }
 
     public static LocalTime parseTimeFormat(String stringDate) {
-        if (stringDate.isEmpty()) {
+        if (stringDate == null) {
             return null;
         }
         String[] numbers = stringDate.split("\\D+");
